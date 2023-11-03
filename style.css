@@ -1,0 +1,192 @@
+body
+{
+	margin:auto;
+	color:white;
+	animation: introbg 0.7s infinite;
+}
+
+.introcontainer
+{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:100vw;
+	height:100vh;
+	background:rgba(0,0,0,.9);
+	box-sizing:border-box;
+	text-transform:uppercase;
+	overflow:hidden;
+
+}
+
+@keyframes introbg
+{
+	0%
+	{
+		background:url(img/welding1.jpg);
+		background-size:cover;
+	}
+	24%
+	{
+		background:url(img/welding1.jpg);
+		background-size:cover;
+	}
+	25%
+	{
+		background:url(img/welding2.jpeg);
+		background-size:cover;
+	}
+	49%
+	{
+		background:url(img/welding2.jpeg);
+		background-size:cover;
+	}
+	50%
+	{
+		background:url(img/welding3.jpg);
+		background-size:cover;
+	}
+	74%
+	{
+		background:url(img/welding3.jpg);
+		background-size:cover;
+	}
+	75%
+	{
+		background:url(img/welding4.jpg);
+		background-size:cover;
+	}
+	100%
+	{
+		background:url(img/welding4.jpg);
+		background-size:cover;
+	}
+	
+}
+
+.introgrid 
+{
+	display: grid;
+	align-items:top;
+	font-family: 'Bebas Neue', sans-serif;
+	grid-template-columns: repeat(7, 9.8vw);
+	grid-template-rows: 25vw 6vw;
+	grid-column-gap: 0;
+	grid-row-gap: 0;
+	z-index:1;
+	border-top:1px solid white;
+	animation:introgrid 0.7s;
+}
+
+@keyframes introgrid
+{
+	0%
+	{
+		transform:translateY(50vh);
+	}
+	50%
+	{
+		transform:translateY(-5vh);
+	}
+	100%
+	{
+		
+	}
+}
+
+.introgridoverlay
+{
+		position:absolute;
+}
+
+.griddiv
+{
+	
+	font-size:18vw;
+	width:100%;
+	height:100%;
+	text-align:center;
+	align-items:top;
+	overflow:hidden;
+	transition:all 0.5s;
+	overflow:hidden;
+	text-shadow:0 0 10px white;
+	animation:showing 1.5s;
+}
+
+.griddivletters
+{
+	width:100%;
+	height:100%;
+	animation:griddivletters 15s infinite;
+}
+
+.griddivlettersdelay1 {animation-delay:0.3s;}
+.griddivlettersdelay2 {animation-delay:0.6s;}
+.griddivlettersdelay3 {animation-delay:0.9s;}
+.griddivlettersdelay4 {animation-delay:1.2s;}
+.griddivlettersdelay5 {animation-delay:1.5s;}
+.griddivlettersdelay6 {animation-delay:1.8s;}
+
+@keyframes griddivletters
+{
+	0%
+	{
+		transform:translateY(0vw);
+	}
+	30%
+	{
+		transform:translateY(0vw);
+	}
+	50%
+	{
+		transform:translateY(-25vw);
+	}
+	80%
+	{
+		transform:translateY(-25vw);
+	}
+	100%
+	{
+		transform:translateY(0vw);
+	}
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2;}
+.div2 { grid-area: 1 / 2 / 2 / 3;}
+.div3 { grid-area: 1 / 3 / 2 / 4;}
+.div4 { grid-area: 1 / 4 / 2 / 5;}
+.div5 { grid-area: 1 / 5 / 2 / 6;}
+.div6 { grid-area: 1 / 6 / 2 / 7;}
+.div7 { grid-area: 1 / 7 / 2 / 8;color:red;text-shadow:0 0 10px red}
+.div8 
+{ 
+	grid-area: 2 / 1 / 3 / 8; 
+	font-size:5vw;
+	border:1px solid white;
+	border-radius:15px;
+	text-align:center;
+	align-items:center;
+	transition:0.5s;
+	animation:showing 1.5s;
+}
+
+.div8:hover
+{
+	background-color:white;
+	color:black;
+	cursor:pointer;
+}
+
+@keyframes showing
+{
+	0%,
+	50%
+	{
+		opacity:0;
+	}
+	100%
+	{
+		
+	}
+}
