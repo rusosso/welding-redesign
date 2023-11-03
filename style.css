@@ -3,6 +3,7 @@ body
 	margin:auto;
 	color:white;
 	animation: introbg 0.7s infinite;
+	user-select:none;
 }
 
 .introcontainer
