@@ -1,8 +1,13 @@
+*
+{
+	transition:0.5s;
+}
+
 body
 {
 	margin:auto;
 	color:white;
-	animation: introbg 0.7s infinite;
+	background:black;
 	user-select:none;
 }
 
@@ -13,11 +18,10 @@ body
 	align-items:center;
 	width:100vw;
 	height:100vh;
-	background:rgba(0,0,0,.8);
 	box-sizing:border-box;
 	text-transform:uppercase;
 	overflow:hidden;
-
+	animation: introbg 0.7s infinite;
 }
 
 @keyframes introbg
@@ -65,6 +69,14 @@ body
 	
 }
 
+.introcontaineroverlay
+{
+	position:absolute;
+	width:100vw;
+	height:100vh;
+	background:rgba(0,0,0,.8);
+}
+
 .introgrid 
 {
 	display: grid;
@@ -109,7 +121,6 @@ body
 	text-align:center;
 	align-items:top;
 	overflow:hidden;
-	transition:all 0.5s;
 	overflow:hidden;
 	text-shadow:0 0 10px white;
 	animation:showing 1.5s;
@@ -168,7 +179,6 @@ body
 	border-radius:15px;
 	text-align:center;
 	align-items:center;
-	transition:0.5s;
 	animation:showing 1.5s;
 }
 

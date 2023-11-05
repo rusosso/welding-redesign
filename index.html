@@ -4,15 +4,20 @@
 	<meta charset="utf-8">
 	<meta lang="PL-pl">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <head>
 
-<body>
-	<div class="introcontainer">
+<body id="body">
+
+	<div class="introcontaineroverlay">
+	</div>
+	
+	<div class="introcontainer" id="introcontainer">
 		
-		<div class="introgrid">
+		<div class="introgrid" id="introgrid">
 			<div class="div1 griddiv">
 			
 				<div class="griddivletters">
@@ -85,7 +90,7 @@
 				</div>
 			</div>
 			
-			<div class="div8">
+			<div class="div8" onclick="intronext()">
 			DALEJ
 			</div>
 		</div>
