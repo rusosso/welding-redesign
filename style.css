@@ -6,6 +6,8 @@
 body
 {
 	margin:auto;
+	height:1000vh;
+	overflow:hidden;
 	color:white;
 	background:black;
 	user-select:none;
@@ -74,7 +76,8 @@ body
 	position:absolute;
 	width:100vw;
 	height:100vh;
-	background:rgba(0,0,0,.8);
+	background:black;
+	opacity:0.8;
 }
 
 .introgrid 
@@ -87,7 +90,6 @@ body
 	grid-column-gap: 0;
 	grid-row-gap: 0;
 	z-index:1;
-	border-top:1px solid white;
 	animation:introgrid 0.7s;
 }
 
@@ -120,7 +122,6 @@ body
 	height:100%;
 	text-align:center;
 	align-items:top;
-	overflow:hidden;
 	overflow:hidden;
 	text-shadow:0 0 10px white;
 	animation:showing 1.5s;
@@ -164,6 +165,16 @@ body
 	}
 }
 
+.griddivlettersoverlay
+{
+	position:absolute;
+	border-top:1px solid white;
+	border-bottom:1px solid rgba(0,0,0,0);
+	width:68.6vw;
+	height:25vw;
+	transition:border-color 1s;
+}
+
 .div1 { grid-area: 1 / 1 / 2 / 2;}
 .div2 { grid-area: 1 / 2 / 2 / 3;}
 .div3 { grid-area: 1 / 3 / 2 / 4;}
@@ -179,6 +190,7 @@ body
 	border-radius:15px;
 	text-align:center;
 	align-items:center;
+	transform:scale(105%);
 	animation:showing 1.5s;
 }
 
@@ -187,6 +199,11 @@ body
 	background-color:white;
 	color:black;
 	cursor:pointer;
+}
+
+.div8:active
+{
+	transform:scale(95%);
 }
 
 @keyframes showing
@@ -200,4 +217,35 @@ body
 	{
 		
 	}
+}
+
+.introarrow
+{
+	position:absolute;
+	top:65vh;
+	text-align:center;
+	text-shadow:0 0 10px white;
+	font-size:18vw;
+	opacity:0;
+	transition:all 2s;
+	animation:introarrow 2s infinite;
+}
+
+@keyframes introarrow
+{
+	0%
+	{
+		transform:translateY(0);
+	}
+	50%
+	{
+		transform:translateY(1vh);
+	}
+}
+
+.firstslide
+{
+	width:100vw;
+	height:100vh;
+	background-color:rgb(10,10,10);
 }
