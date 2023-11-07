@@ -1,0 +1,252 @@
+*
+{
+	transition:0.5s;
+}
+
+body
+{
+	margin:auto;
+	height:1000vh;
+	overflow:hidden;
+	color:white;
+	background:black;
+	user-select:none;
+	scroll-snap-type: y mandatory;
+}
+
+.introcontainer
+{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:100vw;
+	height:100vh;
+	box-sizing:border-box;
+	text-transform:uppercase;
+	overflow:hidden;
+	animation: introbg 0.7s infinite;
+}
+
+@keyframes introbg
+{
+	0%
+	{
+		background:url(img/welding1.jpg);
+		background-size:cover;
+	}
+	24%
+	{
+		background:url(img/welding1.jpg);
+		background-size:cover;
+	}
+	25%
+	{
+		background:url(img/welding2.jpeg);
+		background-size:cover;
+	}
+	49%
+	{
+		background:url(img/welding2.jpeg);
+		background-size:cover;
+	}
+	50%
+	{
+		background:url(img/welding3.jpg);
+		background-size:cover;
+	}
+	74%
+	{
+		background:url(img/welding3.jpg);
+		background-size:cover;
+	}
+	75%
+	{
+		background:url(img/welding4.jpg);
+		background-size:cover;
+	}
+	100%
+	{
+		background:url(img/welding4.jpg);
+		background-size:cover;
+	}
+	
+}
+
+.introcontaineroverlay
+{
+	position:absolute;
+	width:100vw;
+	height:100vh;
+	background:black;
+	opacity:0.8;
+}
+
+.introgrid 
+{
+	display: grid;
+	align-items:top;
+	font-family: 'Bebas Neue', sans-serif;
+	grid-template-columns: repeat(7, 9.8vw);
+	grid-template-rows: 25vw 6vw;
+	grid-column-gap: 0;
+	grid-row-gap: 0;
+	z-index:1;
+	animation:introgrid 0.7s;
+}
+
+@keyframes introgrid
+{
+	0%
+	{
+		transform:translateY(50vh);
+	}
+	50%
+	{
+		transform:translateY(-5vh);
+	}
+	100%
+	{
+		
+	}
+}
+
+.introgridoverlay
+{
+		position:absolute;
+}
+
+.griddiv
+{
+	
+	font-size:18vw;
+	width:100%;
+	height:100%;
+	text-align:center;
+	align-items:top;
+	overflow:hidden;
+	text-shadow:0 0 10px white;
+	animation:showing 1.5s;
+}
+
+.griddivletters
+{
+	width:100%;
+	height:100%;
+	animation:griddivletters 10s infinite;
+}
+
+.griddivlettersdelay1 {animation-delay:0.3s;}
+.griddivlettersdelay2 {animation-delay:0.6s;}
+.griddivlettersdelay3 {animation-delay:0.9s;}
+.griddivlettersdelay4 {animation-delay:1.2s;}
+.griddivlettersdelay5 {animation-delay:1.5s;}
+.griddivlettersdelay6 {animation-delay:1.8s;}
+
+@keyframes griddivletters
+{
+	0%
+	{
+		transform:translateY(0vw);
+	}
+	20%
+	{
+		transform:translateY(0vw);
+	}
+	50%
+	{
+		transform:translateY(-25vw);
+	}
+	70%
+	{
+		transform:translateY(-25vw);
+	}
+	100%
+	{
+		transform:translateY(0vw);
+	}
+}
+
+.griddivlettersoverlay
+{
+	position:absolute;
+	border-top:1px solid white;
+	border-bottom:1px solid rgba(0,0,0,0);
+	width:68.6vw;
+	height:25vw;
+	transition:border-color 1s;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2;}
+.div2 { grid-area: 1 / 2 / 2 / 3;}
+.div3 { grid-area: 1 / 3 / 2 / 4;}
+.div4 { grid-area: 1 / 4 / 2 / 5;}
+.div5 { grid-area: 1 / 5 / 2 / 6;}
+.div6 { grid-area: 1 / 6 / 2 / 7;}
+.div7 { grid-area: 1 / 7 / 2 / 8;color:red;text-shadow:0 0 10px red}
+.div8 
+{ 
+	grid-area: 2 / 1 / 3 / 8; 
+	font-size:5vw;
+	border:1px solid white;
+	border-radius:15px;
+	text-align:center;
+	align-items:center;
+	transform:scale(105%);
+	animation:showing 1.5s;
+}
+
+.div8:hover
+{
+	background-color:white;
+	color:black;
+	cursor:pointer;
+}
+
+.div8:active
+{
+	transform:scale(95%);
+}
+
+@keyframes showing
+{
+	0%,
+	50%
+	{
+		opacity:0;
+	}
+	100%
+	{
+		
+	}
+}
+
+.introarrow
+{
+	position:absolute;
+	top:65vh;
+	text-align:center;
+	text-shadow:0 0 10px white;
+	font-size:18vw;
+	opacity:0;
+	transition:all 2s;
+	animation:introarrow 2s infinite;
+}
+
+@keyframes introarrow
+{
+	0%
+	{
+		transform:translateY(0);
+	}
+	50%
+	{
+		transform:translateY(1vh);
+	}
+}
+
+.firstslide
+{
+	width:100vw;
+	height:100vh;
+	background-color:rgb(10,10,10);
+}
