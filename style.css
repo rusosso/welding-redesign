@@ -1,21 +1,22 @@
 *
 {
 	transition:0.5s;
+	font-family: 'Bebas Neue', sans-serif;
 }
 
 body
 {
 	margin:auto;
-	height:1000vh;
 	overflow:hidden;
 	color:white;
 	background:black;
 	user-select:none;
-	scroll-snap-type: y mandatory;
 }
 
 .introcontainer
 {
+	position:sticky;
+	top:0;
 	display:flex;
 	justify-content:center;
 	align-items:center;
@@ -24,7 +25,8 @@ body
 	box-sizing:border-box;
 	text-transform:uppercase;
 	overflow:hidden;
-	animation: introbg 0.7s infinite;
+	animation: introbg 0.7s infinite; 
+	z-index:1;
 }
 
 @keyframes introbg
@@ -85,7 +87,6 @@ body
 {
 	display: grid;
 	align-items:top;
-	font-family: 'Bebas Neue', sans-serif;
 	grid-template-columns: repeat(7, 9.8vw);
 	grid-template-rows: 25vw 6vw;
 	grid-column-gap: 0;
@@ -173,7 +174,7 @@ body
 	border-bottom:1px solid rgba(0,0,0,0);
 	width:68.6vw;
 	height:25vw;
-	transition:border-color 1s;
+	transition:all 1s;
 }
 
 .div1 { grid-area: 1 / 1 / 2 / 2;}
@@ -204,7 +205,7 @@ body
 
 .div8:active
 {
-	transform:scale(95%);
+	transform:scale(102%);
 }
 
 @keyframes showing
@@ -220,33 +221,96 @@ body
 	}
 }
 
+.arrow
+{
+	width:15vh;
+	height:15vh;
+	border-bottom:1px solid white;
+	border-left:1px solid white;
+	transform:rotate(-45deg);
+}
+
 .introarrow
 {
 	position:absolute;
 	top:65vh;
+	color:white;
 	text-align:center;
-	text-shadow:0 0 10px white;
-	font-size:18vw;
+	font-size:16vw;
 	opacity:0;
-	transition:all 2s;
-	animation:introarrow 2s infinite;
+	transition:all 0.5s;
 }
 
+.introarrow p
+{
+	font-size:5vh;
+} 
 @keyframes introarrow
 {
 	0%
 	{
 		transform:translateY(0);
 	}
-	50%
+	30%
 	{
-		transform:translateY(1vh);
+		transform:translateY(-5vh);
 	}
+	40%
+	{
+		opacity:1;
+	}
+	60%
+	{
+		transform:translateY(10vh);
+		opacity:0;
+	}
+	65%
+	{
+		transform:translateY(0);
+		opacity:0;
+	}
+	
 }
 
-.firstslide
+.slide
 {
+	position:relative;
+	color:white;
 	width:100vw;
 	height:100vh;
-	background-color:rgb(10,10,10);
+	background-color:#101010;
+	text-align:center;
+	z-index:2;
+}
+
+.title
+{
+	text-transform:uppercase;
+	font-size:10vh;
+}
+.title > span >span
+{
+	color:red;
+}
+
+.content
+{
+	width:30vw;
+	font-size:3vh;
+}
+
+.first > .title
+{
+	position:absolute;
+	top:5vh;
+	left:5vw;
+	margin:auto;
+}
+
+.first > .content
+{
+	position:absolute;
+	top:20vh;
+	left:5vw;
+	text-align:left;
 }

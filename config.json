@@ -7,10 +7,10 @@
   "ascent": 850,
   "glyphs": [
     {
-      "uid": "289b5f92f23acf1059c93fbf401c1ad5",
-      "css": "down-open-big",
+      "uid": "616b755d0f4c7d2dc7a1dcc2e5427039",
+      "css": "down-open",
       "code": 59392,
-      "src": "entypo"
+      "src": "elusive"
     }
   ]
 }
